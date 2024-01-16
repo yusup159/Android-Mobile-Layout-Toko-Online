@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:background="@color/white">
+    <View
+        android:id="@+id/viewHeader"
+        android:layout_width="match_parent"
+        android:layout_height="125dp"
+        android:background="@color/white"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/account"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:src="@drawable/ic_account"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/titleImageAcount"/>
+    <TextView
+        android:id="@+id/titleImageAcount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingLeft="10dp"
+        android:text="B STORE"
+        android:textStyle="bold"
+        android:textSize="18sp"
+        android:textColor="@color/textberanda"
+        app:layout_constraintBottom_toBottomOf="@id/account"
+        app:layout_constraintStart_toEndOf="@id/account"
+        />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:layout_width="26dp"
+        android:layout_height="26dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:src="@drawable/ic_notifications"
+        app:layout_constraintBottom_toBottomOf="@id/account"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/account" />
+
+    <LinearLayout
+        android:id="@+id/cardHeader"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        app:cardCornerRadius="16sp"
+        app:layout_constraintBottom_toBottomOf="@id/viewHeader"
+        app:layout_constraintTop_toBottomOf="@id/viewHeader">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <TextView
+                android:id="@+id/barangjual"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Barang Terjual"
+                android:textSize="25sp"
+                android:textStyle="bold"
+                android:textColor="@color/warna_text_barang"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="2410 Barang"
+                android:textSize="38sp"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                app:layout_constraintTop_toBottomOf="@id/barangjual"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </LinearLayout>
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/card_dua"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/cardHeader"
+        android:orientation="horizontal"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        >
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="15dp"
+            android:background="@drawable/bg_card_produk">
+
+            <LinearLayout
+                android:id="@+id/layoutbaranglaris"
+                android:layout_width="170dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_card_produk"
+                android:gravity="center"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toStartOf="@id/layoutAllbarang"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <TextView
+                    android:id="@+id/laris"
+                    android:layout_width="200dp"
+                    android:layout_height="50dp"
+                    android:gravity="center"
+                    android:text="Produk Terlaris"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"
+
+                    />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layoutAllbarang"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_card_barang"
+                android:gravity="center"
+                android:orientation="vertical"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/layoutbaranglaris"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <TextView
+                    android:layout_width="200dp"
+                    android:layout_height="50dp"
+                    android:gravity="center"
+                    android:text="Semua Produk"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/white"
+                    />
+
+
+            </LinearLayout>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerview"
+        android:layout_width="386dp"
+        android:layout_height="477dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/card_dua"
+        app:layout_constraintVertical_bias="0.0" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

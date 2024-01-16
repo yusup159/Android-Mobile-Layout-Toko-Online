@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:background="@color/warna_text_barang"
+    tools:context=".SettingFragment">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/profil"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingTop="20dp"
+        android:layout_margin="20dp"
+        app:cardCornerRadius="20dp"
+        android:background="@color/bg_card_view"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="16dp"
+            android:layout_marginStart="16dp">
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:src="@drawable/larry"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="8dp"
+                android:textSize="30sp"
+                android:text="Mega chan"
+                android:textColor="@color/black"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/textemail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="25sp"
+                android:text="megachan@gmail.com"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="30dp"
+                android:background="@color/underline"/>
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="15dp"
+                >
+                <ImageView
+                    android:id="@+id/account0"
+                    android:layout_width="50dp"
+                    android:layout_height="30dp"
+                    android:src="@drawable/ic_accountseting"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toStartOf="@id/textacount0"
+                    />
+                <TextView
+                    android:id="@+id/textacount0"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Data Pribadi"
+                    android:textSize="16sp"
+                    app:layout_constraintStart_toEndOf="@id/account0"
+                    app:layout_constraintBottom_toBottomOf="@id/textacount0"/>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_marginTop="30dp"
+                android:background="@color/underline"/>
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="15dp"
+                >
+                <ImageView
+                    android:id="@+id/account"
+                    android:layout_width="50dp"
+                    android:layout_height="30dp"
+                    android:src="@drawable/ic_phone"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toStartOf="@id/textacount"
+                    />
+                <TextView
+                    android:id="@+id/textacount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="No Telepon"
+                    android:textSize="16sp"
+                    app:layout_constraintStart_toEndOf="@id/account"
+                    app:layout_constraintBottom_toBottomOf="@id/textacount"/>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_marginTop="30dp"
+                android:background="@color/underline"/>
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:id="@+id/account1"
+                    android:layout_width="50dp"
+                    android:layout_height="30dp"
+                    android:src="@drawable/ic_star"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toStartOf="@id/textacount1"
+                    />
+                <TextView
+                    android:id="@+id/textacount1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Ratting"
+                    android:textSize="16sp"
+                    app:layout_constraintStart_toEndOf="@id/account1"
+                    app:layout_constraintBottom_toBottomOf="@id/textacount1"/>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_marginTop="30dp"
+                android:background="@color/underline"/>
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:id="@+id/account7"
+                    android:layout_width="50dp"
+                    android:layout_height="30dp"
+                    android:src="@drawable/ic_headset"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toStartOf="@id/textacount7"
+                    />
+                <TextView
+                    android:id="@+id/textacount7"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Customer Service"
+                    android:textSize="16sp"
+                    app:layout_constraintStart_toEndOf="@id/account7"
+                    app:layout_constraintBottom_toBottomOf="@id/textacount7"/>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_marginTop="30dp"
+                android:background="@color/underline"/>
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:id="@+id/account3"
+                    android:layout_width="50dp"
+                    android:layout_height="30dp"
+                    android:src="@drawable/ic_stars"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toStartOf="@id/textacount3"
+                    />
+                <TextView
+                    android:id="@+id/textacount3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Versi 3.9.0"
+                    android:textSize="16sp"
+                    app:layout_constraintStart_toEndOf="@id/account3"
+                    app:layout_constraintBottom_toBottomOf="@id/textacount3"/>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_marginTop="30dp"
+                android:background="@color/underline"/>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/logout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:id="@+id/account4"
+                    android:layout_width="50dp"
+                    android:layout_height="30dp"
+                    android:src="@drawable/ic_baseline_logout_24"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toStartOf="@id/textacount4"
+                    />
+                <TextView
+                    android:id="@+id/textacount4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="logout"
+                    android:textSize="16sp"
+                    app:layout_constraintStart_toEndOf="@id/account4"
+                    app:layout_constraintBottom_toBottomOf="@id/textacount4"/>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        </LinearLayout>
+
+
+
+    </androidx.cardview.widget.CardView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

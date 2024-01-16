@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:background="@color/dashboard_item_1"
+        app:cardCornerRadius="14dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="8dp"
+            android:src="@drawable/headset"
+            />
+
+    </com.google.android.material.card.MaterialCardView>
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        app:cardBackgroundColor="@color/card_background"
+        app:cardCornerRadius="14dp"
+        app:cardElevation="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+        
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingStart="40dp"
+            android:paddingLeft="40dp"
+            android:paddingTop="16dp"
+            android:paddingEnd="16dp"
+            android:paddingRight="16dp"
+            android:paddingBottom="16dp">
+            
+            <TextView
+                android:id="@+id/Amount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="+Rp. 200.000"
+                android:textColor="@color/warna_text_barang"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"/>
+            <TextView
+                android:id="@+id/text_tittle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:text="Headset Ajaib"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                app:layout_constraintEnd_toStartOf="@id/Amount"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"/>
+            <TextView
+                android:id="@+id/imagelocation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="2 June 2020"
+                app:layout_constraintStart_toStartOf="@id/text_tittle"
+                app:layout_constraintTop_toBottomOf="@id/text_tittle"
+                android:tint="@color/secondary_text"/>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:background="@color/warna_text_barang">
+
+    <View
+        android:id="@+id/viewHeader"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:background="@color/warna_text_barang"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="0dp" />
+
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/account"
+        android:layout_width="70dp"
+        android:layout_height="80dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="72dp"
+        android:src="@drawable/tangan"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/card_dua"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/card"
+        android:orientation="horizontal"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        >
+
+
+
+
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/card"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="112dp"
+        app:layout_constraintTop_toTopOf="@+id/viewHeader"
+        tools:layout_editor_absoluteX="0dp">
+
+
+        <TextView
+            android:id="@+id/barangjual"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="44dp"
+            android:text="Input Transaksi Baru"
+            android:textColor="@color/black"
+            android:textSize="40sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <ImageView
+        android:id="@+id/balik_tran"
+        android:layout_width="51dp"
+        android:layout_height="34dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:src="@drawable/btn_back"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:layout_width="406dp"
+        android:layout_height="517dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/card_dua">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24sp"
+            android:text="Lorem ipsum dolor  sit amet lorem ipsum dolor sit amet."
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/tran"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+
+            <EditText
+                android:id="@+id/nominal"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_margin="30dp"
+                android:paddingLeft="20dp"
+                android:background="@drawable/bg_login"
+                android:drawableStart="@drawable/nominal"
+                android:hint="Nominal"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"/>
+            <Spinner
+                android:id="@+id/jenistran"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_margin="30dp"
+                android:paddingLeft="20dp"
+                android:entries="@array/tambah_transaksi"
+                android:background="@drawable/bg_login"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/nominal">
+
+            </Spinner>
+
+            <EditText
+                android:id="@+id/desk"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_margin="30dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="28dp"
+                android:background="@drawable/bg_login"
+                android:hint="Deskripsi"
+                android:drawableStart="@drawable/deskripsi"
+                android:paddingLeft="20dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/jenistran" />
+
+            <EditText
+                android:id="@+id/tgl"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_margin="30dp"
+                android:paddingLeft="20dp"
+                android:background="@drawable/bg_login"
+                android:hint="Tanggal Transaksi"
+                android:drawableStart="@drawable/kalender"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/desk"/>
+            <Button
+                android:id="@+id/btn_Tambah"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginLeft="55dp"
+                android:layout_marginTop="50dp"
+                android:layout_marginRight="55dp"
+                android:background="@drawable/bg_login"
+                android:text="Tambah Transaksi"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tgl"/>
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="@id/jenistran"
+                app:layout_constraintEnd_toEndOf="@+id/jenistran"
+                app:layout_constraintHorizontal_bias="0.962"
+                app:layout_constraintStart_toStartOf="@+id/jenistran"
+                app:layout_constraintTop_toTopOf="@id/jenistran"
+                app:layout_constraintVertical_bias="0.538"
+                app:srcCompat="@drawable/ic_down" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
